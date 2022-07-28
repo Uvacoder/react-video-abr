@@ -6,17 +6,26 @@ const VideoPlayer = ( props) => {
   const videoEl = useRef();
   const [cloud] = useState(props.cloudName);
   const [id] = useState(props.publicId);
-  const [loaded, setLoaded] = useState(false);
+  const [jsLoaded, setJSLoaded] = useState(false);
+  // const [cssLoaded, setCSSLoaded] = useState(false)
 
   useEffect(() => {
     const scriptTag = document.createElement('script');
-    scriptTag.src = 'cloudinary-video-player/dist/cld-video-player.min.js';
-    scriptTag.addEventListener('load', () => setLoaded(true));
+    scriptTag.src = 'https://cdn.jsdelivr.net/npm/cloudinary-video-player@1.9.1/dist/cld-video-player.min.js';
+    scriptTag.addEventListener('load', () => setJSLoaded(true));
     document.body.appendChild(scriptTag);
-  }, []);
+  }, [jsLoaded]);
+
+  // useEffect(() => {
+  //   const cssTag = document.createElement('link');
+  //   cssTag.href = 'https://cdn.jsdelivr.net/npm/cloudinary-video-player@1.9.1/dist/cld-video-player.min.css';
+  //   cssTag.rel='stylesheet'
+  //   cssTag.addEventListener('load', () => setCSSLoaded(true));
+  //   document.body.appendChild(cssTag);
+  // }, [cssLoaded]);
 
   useEffect(() => {
-    if (!loaded) return;
+    if (!jsLoaded) return;
 
     const videoPlayer = window.cloudinary.videoPlayer(videoEl.current, {
       cloud_name: cloud,
@@ -27,7 +36,7 @@ const VideoPlayer = ( props) => {
     videoPlayer.source(id, {
       sourceTypes: ['dash', 'hls','mp4'],
     });
-    }, [loaded,cloud,id]);
+    }, [jsLoaded,cloud,id]);
 
   return (
     <div>
