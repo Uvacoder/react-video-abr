@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/react-video-abr/static/css/main.2e36dfec.css",
-    "main.js": "/react-video-abr/static/js/main.5fffc2c7.js",
+    "main.js": "/react-video-abr/static/js/main.b9d774db.js",
     "static/js/787.38048df4.chunk.js": "/react-video-abr/static/js/787.38048df4.chunk.js",
     "static/media/cloudinary_icon_for_black_bg.svg": "/react-video-abr/static/media/cloudinary_icon_for_black_bg.0649bdb9295d8e7ad807.svg",
     "static/media/cloudinary_icon_for_white_bg.svg": "/react-video-abr/static/media/cloudinary_icon_for_white_bg.cdc80e08707cc921db60.svg",
     "index.html": "/react-video-abr/index.html",
     "main.2e36dfec.css.map": "/react-video-abr/static/css/main.2e36dfec.css.map",
-    "main.5fffc2c7.js.map": "/react-video-abr/static/js/main.5fffc2c7.js.map",
+    "main.b9d774db.js.map": "/react-video-abr/static/js/main.b9d774db.js.map",
     "787.38048df4.chunk.js.map": "/react-video-abr/static/js/787.38048df4.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.2e36dfec.css",
-    "static/js/main.5fffc2c7.js"
+    "static/js/main.b9d774db.js"
   ]
 }
